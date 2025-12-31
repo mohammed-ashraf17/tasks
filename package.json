@@ -1,0 +1,22 @@
+{
+  "name": "tasks_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch task4.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohammed-ashraf17/tasks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohammed-ashraf17/tasks/issues"
+  },
+  "homepage": "https://github.com/mohammed-ashraf17/tasks#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

@@ -437,47 +437,47 @@
 // /* ---------------------------------(5)--------------------------------- */
 
 
-// const http = require("node:http")
+const http = require("node:http")
 
-// const port = 5000;
+const port = 5000;
 
-// let users =
-// [
-//    {
-//     id:1,
-//     name: "user1",
-//     age: 27,
-//     emali: "user@emali.com"
-//   }
-// ]
+let users =
+[
+   {
+    id:1,
+    name: "user1",
+    age: 27,
+    emali: "user@emali.com"
+  }
+]
 
-// const server = http.createServer((req , res)=>{
-//     const {method , url} = req
-//       if(method == "GET" && url == "/user/1")
-//     {
-//         res.writeHead(200 , {"content-type":"application/json"})
-//         res.write(JSON.stringify({message:"don" , users}))
-//         res.end()
-//     }
-//     else if(method == "GET" && url == "/user/99"){
-//         res.writeHead(404 , {"content-type":"application/json"})
-//         res.write(JSON.stringify({message:"user not found" }))
-//         res.end()
-//     }
+const server = http.createServer((req , res)=>{
+    const {method , url} = req
+      if(method == "GET" && url == "/user/1")
+    {
+        res.writeHead(200 , {"content-type":"application/json"})
+        res.write(JSON.stringify({message:"don" , users}))
+        res.end()
+    }
+    else if(method == "GET" && url == "/user/99"){
+        res.writeHead(404 , {"content-type":"application/json"})
+        res.write(JSON.stringify({message:"user not found" }))
+        res.end()
+    }
     
-//     else
-//     {
-//         res.writeHead(404 , {"content-type":"application/json"})
-//         res.write(JSON.stringify({message:"NOT FOUND"}))
-//         res.end()
+    else
+    {
+        res.writeHead(404 , {"content-type":"application/json"})
+        res.write(JSON.stringify({message:"NOT FOUND"}))
+        res.end()
 
-//     }
+    }
     
 
-// })
-// server.listen(port , ()=>{
-//     console.log(`server is running on port ${port}`);
-// })
+})
+server.listen(port , ()=>{
+    console.log(`server is running on port ${port}`);
+})
 
 
 // /*              ***               Part(3)              ***               */
